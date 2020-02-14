@@ -1,0 +1,9 @@
+[alias]
+	st = status
+	co = checkout
+	cm = "commit -m"
+	ca = "commit --amend"
+	df = diff
+	merged-branches = "!git branch --merged | grep -v -e '^\\s*master' -e '^\\s*develop' -e '^\\s*production' -e '\\*'"
+	clearbranches = "!git merged-branches > ~/tmp/merged-branches && vim ~/tmp/merged-branches && xargs git branch -d < ~/tmp/merged-branches"
+	l = log --oneline -n 40

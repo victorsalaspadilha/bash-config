@@ -7,3 +7,10 @@
 	merged-branches = "!git branch --merged | grep -v -e '^\\s*master' -e '^\\s*develop' -e '^\\s*production' -e '\\*'"
 	clearbranches = "!git merged-branches > ~/tmp/merged-branches && vim ~/tmp/merged-branches && xargs git branch -d < ~/tmp/merged-branches"
 	l = log --oneline -n 40
+[user]
+	name = <name>
+	email = <email>
+[core]
+	excludesfile = ~/.gitignore_global
+	pager =
+	editor = vim
